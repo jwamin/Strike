@@ -54,6 +54,8 @@
 		57FCDB8E24D7139D00C3FD21 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		57FCDB9024D714ED00C3FD21 /* DetailListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListItem.swift; sourceTree = "<group>"; };
 		57FCDB9224D7284600C3FD21 /* AddForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddForm.swift; sourceTree = "<group>"; };
+		57FCDB9424D732BD00C3FD21 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		57FCDB9624D733F100C3FD21 /* shot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shot.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +86,9 @@
 		57FCDB5424D70E8F00C3FD21 = {
 			isa = PBXGroup;
 			children = (
+				57FCDB9424D732BD00C3FD21 /* README.md */,
 				57FCDB5F24D70E8F00C3FD21 /* Strike */,
+				57FCDB9524D733C200C3FD21 /* Img */,
 				57FCDB7224D70E9100C3FD21 /* StrikeTests */,
 				57FCDB7D24D70E9100C3FD21 /* StrikeUITests */,
 				57FCDB5E24D70E8F00C3FD21 /* Products */,
@@ -142,6 +146,14 @@
 				57FCDB8024D70E9100C3FD21 /* Info.plist */,
 			);
 			path = StrikeUITests;
+			sourceTree = "<group>";
+		};
+		57FCDB9524D733C200C3FD21 /* Img */ = {
+			isa = PBXGroup;
+			children = (
+				57FCDB9624D733F100C3FD21 /* shot.png */,
+			);
+			path = Img;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
