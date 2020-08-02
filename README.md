@@ -11,10 +11,11 @@
 * Swipe to delete 
 
 ### ToDo (LOL)
+* Transition for symbols
 * Groups
 * Greater range of ordering options (dateCreated, dateUpdated)
-* Kanban?
-* Tags
+* Kanban Screen?
+* Tags, tag management
 * iOS Target
 * 'Real' Persistence
 
