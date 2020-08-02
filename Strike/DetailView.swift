@@ -16,11 +16,6 @@ struct DetailView: View {
   var body: some View {
     List(model.getModelsWithSorting(sorting: sorting)){ model in
       DetailListItem(model: model)
-        .onTapGesture{
-          withAnimation{
-            self.model.cycleStatus(with: model.id)
-          }
-        }
     }.listStyle(SidebarListStyle())
   }
 }

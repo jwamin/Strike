@@ -9,6 +9,8 @@ import SwiftUI
 
 struct DetailListItem: View {
   
+  @EnvironmentObject var mainModel: StrikeModel
+  
   let model: ToDoModel
   @State var expanded: Bool = false
   
@@ -23,36 +25,50 @@ struct DetailListItem: View {
     }
   }
   
-    var body: some View {
-      
-      VStack(alignment: .leading){
-        HStack(alignment:.top){
-        Label(model.title, systemImage: imageName)
-          Spacer()
-          Button(action: {
-            withAnimation{
-                  self.expanded.toggle()
-            }
-            
-          }, label: {
-            Image(systemName: "info.circle")
-          })
+  var body: some View {
+    
+    
+    HStack(alignment:.firstTextBaseline){
+      Group {
+        Image(systemName: imageName)
+        VStack(alignment:.leading){
+          Text(model.title)
+            .font(.title3)
+            .bold()
+            .strikethrough(model.state == .done).animation(.default)
+          if expanded {
+            Text(model.description)
+              .strikethrough(model.state == .done)
+              .lineLimit(nil)
+              .multilineTextAlignment(.leading)
+              .font(Font.system(.body).smallCaps())
+              .frame(maxHeight:.infinity).animation(.default).zIndex(1)
+          }
+        }.animation(.default)
+      }.onTapGesture{
+        withAnimation{
+          self.expanded = false
+          self.mainModel.cycleStatus(with: model.id)
         }
-        if expanded {
-          Text(model.description).font(Font.system(.body).smallCaps())
-          .strikethrough(model.state == .done)
-        }
-        Spacer()
       }
-    }
+      Spacer()
+      Button(action: {
+        withAnimation {
+          self.expanded.toggle()
+        }
+      }, label: {
+        Image(systemName:"info.circle")
+      }).foregroundColor(expanded ? Color.red : nil)
+    }.frame(maxWidth:.infinity)
+  }
 }
 
 struct DetailListItem_Previews: PreviewProvider {
-    static var previews: some View {
-      Group {
-        DetailListItem(model: TestModel().models.first!)
-        DetailListItem(model: TestModel().models[1])
-        DetailListItem(model: TestModel().models[3])
-      }
+  static var previews: some View {
+    Group {
+      DetailListItem(model: TestModel().models.first!)
+      DetailListItem(model: TestModel().models[1],expanded: true)
+      DetailListItem(model: TestModel().models[3])
     }
+  }
 }

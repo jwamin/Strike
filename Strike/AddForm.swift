@@ -20,7 +20,7 @@ struct AddForm: View {
         Section{
           Text("Add A Task").font(.largeTitle)
           TextField("Title", text: $title).textFieldStyle(DefaultTextFieldStyle())
-          TextField("Description", text: $description).textFieldStyle(DefaultTextFieldStyle())
+          TextField("Description", text: $description).lineLimit(3)
         }.frame(minWidth:300)
         Section{
           Button("Submit") {

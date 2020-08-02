@@ -15,6 +15,7 @@ struct ContentView: View {
     case all
     case done
     case progress
+    case notStarted
   }
   
   @State var selection: Set<SideBarOptions> = [.all] {
@@ -30,12 +31,24 @@ struct ContentView: View {
     
     List(selection: $selection){
       
-      SideBarOption(title: "All", iconName: "circles.hexagonpath", option: SideBarOptions.all)
+      Section {
+        Text("Strike")
+        SideBarOption(title: "All", iconName: "circles.hexagonpath", option: SideBarOptions.all)
+      }
+
+      Divider()
+
+      Section {
+        Text("Sorting Options")
+        SideBarOption(title: "Not Started", iconName: "circle", option: SideBarOptions.notStarted)
+        
+        SideBarOption(title: "In Progress", iconName: "circle.lefthalf.fill", option: SideBarOptions.progress)
+        
+        SideBarOption(title: "Done", iconName: "circle.fill", option: .done)
+        
+      }
       
-      SideBarOption(title: "In Progress", iconName: "circle.lefthalf.fill", option: SideBarOptions.progress)
-      
-      SideBarOption(title: "Done", iconName: "circle.fill", option: .done)
-      
+  
     }.listStyle(SidebarListStyle())
     
   }
