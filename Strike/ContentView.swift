@@ -32,7 +32,6 @@ struct ContentView: View {
     List(selection: $selection){
       
       Section {
-        Text("Strike")
         SideBarOption(title: "All", iconName: "circles.hexagonpath", option: SideBarOptions.all)
       }
 

@@ -30,7 +30,7 @@ struct DetailListItem: View {
     
     HStack(alignment:.firstTextBaseline){
       Group {
-        Image(systemName: imageName)
+        Image(systemName: imageName).animation(.default)
         VStack(alignment:.leading){
           Text(model.title)
             .font(.title3)
@@ -41,10 +41,10 @@ struct DetailListItem: View {
               .strikethrough(model.state == .done)
               .lineLimit(nil)
               .multilineTextAlignment(.leading)
-              .font(Font.system(.body).smallCaps())
+              .font(Font.system(.body).smallCaps()).padding()
               .frame(maxHeight:.infinity).animation(.default).zIndex(1)
           }
-        }.animation(.default)
+        }
       }.onTapGesture{
         withAnimation{
           self.expanded = false
