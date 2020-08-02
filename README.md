@@ -15,6 +15,8 @@
 * Greater range of ordering options (dateCreated, dateUpdated)
 * Kanban?
 * Tags
+* iOS Target
+* 'Real' Persistence
 
 #### Frameworks used
 `SwiftUI` `SwiftUI Lifecycle`
