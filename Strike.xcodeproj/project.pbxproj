@@ -13,6 +13,10 @@
 		57FCDB6824D70E9100C3FD21 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57FCDB6724D70E9100C3FD21 /* Preview Assets.xcassets */; };
 		57FCDB7424D70E9100C3FD21 /* StrikeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCDB7324D70E9100C3FD21 /* StrikeTests.swift */; };
 		57FCDB7F24D70E9100C3FD21 /* StrikeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCDB7E24D70E9100C3FD21 /* StrikeUITests.swift */; };
+		57FCDB8D24D710D200C3FD21 /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCDB8C24D710D200C3FD21 /* TodoModel.swift */; };
+		57FCDB8F24D7139D00C3FD21 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCDB8E24D7139D00C3FD21 /* DetailView.swift */; };
+		57FCDB9124D714ED00C3FD21 /* DetailListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCDB9024D714ED00C3FD21 /* DetailListItem.swift */; };
+		57FCDB9324D7284600C3FD21 /* AddForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCDB9224D7284600C3FD21 /* AddForm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,10 @@
 		57FCDB7A24D70E9100C3FD21 /* StrikeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StrikeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57FCDB7E24D70E9100C3FD21 /* StrikeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrikeUITests.swift; sourceTree = "<group>"; };
 		57FCDB8024D70E9100C3FD21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57FCDB8C24D710D200C3FD21 /* TodoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
+		57FCDB8E24D7139D00C3FD21 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		57FCDB9024D714ED00C3FD21 /* DetailListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListItem.swift; sourceTree = "<group>"; };
+		57FCDB9224D7284600C3FD21 /* AddForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddForm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +106,10 @@
 			children = (
 				57FCDB6024D70E8F00C3FD21 /* StrikeApp.swift */,
 				57FCDB6224D70E8F00C3FD21 /* ContentView.swift */,
+				57FCDB9224D7284600C3FD21 /* AddForm.swift */,
+				57FCDB8E24D7139D00C3FD21 /* DetailView.swift */,
+				57FCDB9024D714ED00C3FD21 /* DetailListItem.swift */,
+				57FCDB8C24D710D200C3FD21 /* TodoModel.swift */,
 				57FCDB6424D70E9100C3FD21 /* Assets.xcassets */,
 				57FCDB6924D70E9100C3FD21 /* Info.plist */,
 				57FCDB6A24D70E9100C3FD21 /* Strike.entitlements */,
@@ -261,8 +273,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57FCDB8D24D710D200C3FD21 /* TodoModel.swift in Sources */,
+				57FCDB8F24D7139D00C3FD21 /* DetailView.swift in Sources */,
 				57FCDB6324D70E8F00C3FD21 /* ContentView.swift in Sources */,
 				57FCDB6124D70E8F00C3FD21 /* StrikeApp.swift in Sources */,
+				57FCDB9124D714ED00C3FD21 /* DetailListItem.swift in Sources */,
+				57FCDB9324D7284600C3FD21 /* AddForm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
