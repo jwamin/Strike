@@ -17,6 +17,7 @@
 		57FCDB8F24D7139D00C3FD21 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCDB8E24D7139D00C3FD21 /* DetailView.swift */; };
 		57FCDB9124D714ED00C3FD21 /* DetailListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCDB9024D714ED00C3FD21 /* DetailListItem.swift */; };
 		57FCDB9324D7284600C3FD21 /* AddForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCDB9224D7284600C3FD21 /* AddForm.swift */; };
+		57FCDB9924D73BBF00C3FD21 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCDB9824D73BB600C3FD21 /* CalendarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		57FCDB9224D7284600C3FD21 /* AddForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddForm.swift; sourceTree = "<group>"; };
 		57FCDB9424D732BD00C3FD21 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		57FCDB9624D733F100C3FD21 /* shot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shot.png; sourceTree = "<group>"; };
+		57FCDB9824D73BB600C3FD21 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				57FCDB8E24D7139D00C3FD21 /* DetailView.swift */,
 				57FCDB9024D714ED00C3FD21 /* DetailListItem.swift */,
 				57FCDB8C24D710D200C3FD21 /* TodoModel.swift */,
+				57FCDB9824D73BB600C3FD21 /* CalendarView.swift */,
 				57FCDB6424D70E9100C3FD21 /* Assets.xcassets */,
 				57FCDB6924D70E9100C3FD21 /* Info.plist */,
 				57FCDB6A24D70E9100C3FD21 /* Strike.entitlements */,
@@ -286,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57FCDB8D24D710D200C3FD21 /* TodoModel.swift in Sources */,
+				57FCDB9924D73BBF00C3FD21 /* CalendarView.swift in Sources */,
 				57FCDB8F24D7139D00C3FD21 /* DetailView.swift in Sources */,
 				57FCDB6324D70E8F00C3FD21 /* ContentView.swift in Sources */,
 				57FCDB6124D70E8F00C3FD21 /* StrikeApp.swift in Sources */,
