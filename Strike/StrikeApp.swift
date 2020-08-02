@@ -12,13 +12,20 @@ struct StrikeApp: App {
   
   @StateObject private var model: StrikeModel = StrikeModel()
   
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-              .environmentObject(model)
-              .frame(minWidth: 900, maxWidth: .infinity, minHeight: 500, maxHeight: .infinity)
-        }
+  var main: some View {
+    ContentView()
+      .environmentObject(model)
+  }
+  
+  var body: some Scene {
+    WindowGroup {
+      #if os(macOS)
+      main.frame(minWidth: 900, maxWidth: .infinity, minHeight: 500, maxHeight: .infinity)
+      #else
+      main
+      #endif
     }
+  }
 }
 
 struct Constants {

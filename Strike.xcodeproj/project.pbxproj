@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57F0D7B324D7788400D5F688 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57F0D7B224D7788400D5F688 /* Assets.xcassets */; };
+		57F0D7B624D7788400D5F688 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57F0D7B524D7788400D5F688 /* Preview Assets.xcassets */; };
+		57F0D7BB24D778A600D5F688 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCDB6224D70E8F00C3FD21 /* ContentView.swift */; };
+		57F0D7BC24D778A900D5F688 /* StrikeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCDB6024D70E8F00C3FD21 /* StrikeApp.swift */; };
+		57F0D7BD24D778AC00D5F688 /* AddForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCDB9224D7284600C3FD21 /* AddForm.swift */; };
+		57F0D7BE24D778B000D5F688 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCDB8E24D7139D00C3FD21 /* DetailView.swift */; };
+		57F0D7BF24D778B300D5F688 /* DetailListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCDB9024D714ED00C3FD21 /* DetailListItem.swift */; };
+		57F0D7C024D778B600D5F688 /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCDB8C24D710D200C3FD21 /* TodoModel.swift */; };
 		57FCDB6124D70E8F00C3FD21 /* StrikeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCDB6024D70E8F00C3FD21 /* StrikeApp.swift */; };
 		57FCDB6324D70E8F00C3FD21 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCDB6224D70E8F00C3FD21 /* ContentView.swift */; };
 		57FCDB6524D70E9100C3FD21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57FCDB6424D70E9100C3FD21 /* Assets.xcassets */; };
@@ -38,6 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		57F0D7AC24D7788200D5F688 /* Strike-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Strike-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		57F0D7B224D7788400D5F688 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		57F0D7B524D7788400D5F688 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		57F0D7B724D7788400D5F688 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57FCDB5D24D70E8F00C3FD21 /* Strike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Strike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57FCDB6024D70E8F00C3FD21 /* StrikeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrikeApp.swift; sourceTree = "<group>"; };
 		57FCDB6224D70E8F00C3FD21 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +73,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		57F0D7A924D7788200D5F688 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		57FCDB5A24D70E8F00C3FD21 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -85,11 +104,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		57F0D7AD24D7788200D5F688 /* Strike-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				57F0D7B224D7788400D5F688 /* Assets.xcassets */,
+				57F0D7B724D7788400D5F688 /* Info.plist */,
+				57F0D7B424D7788400D5F688 /* Preview Content */,
+			);
+			path = "Strike-iOS";
+			sourceTree = "<group>";
+		};
+		57F0D7B424D7788400D5F688 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				57F0D7B524D7788400D5F688 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		57FCDB5424D70E8F00C3FD21 = {
 			isa = PBXGroup;
 			children = (
 				57FCDB9424D732BD00C3FD21 /* README.md */,
 				57FCDB5F24D70E8F00C3FD21 /* Strike */,
+				57F0D7AD24D7788200D5F688 /* Strike-iOS */,
 				57FCDB9524D733C200C3FD21 /* Img */,
 				57FCDB7224D70E9100C3FD21 /* StrikeTests */,
 				57FCDB7D24D70E9100C3FD21 /* StrikeUITests */,
@@ -103,6 +141,7 @@
 				57FCDB5D24D70E8F00C3FD21 /* Strike.app */,
 				57FCDB6F24D70E9100C3FD21 /* StrikeTests.xctest */,
 				57FCDB7A24D70E9100C3FD21 /* StrikeUITests.xctest */,
+				57F0D7AC24D7788200D5F688 /* Strike-iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -162,6 +201,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		57F0D7AB24D7788200D5F688 /* Strike-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57F0D7BA24D7788400D5F688 /* Build configuration list for PBXNativeTarget "Strike-iOS" */;
+			buildPhases = (
+				57F0D7A824D7788200D5F688 /* Sources */,
+				57F0D7A924D7788200D5F688 /* Frameworks */,
+				57F0D7AA24D7788200D5F688 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Strike-iOS";
+			productName = "Strike-iOS";
+			productReference = 57F0D7AC24D7788200D5F688 /* Strike-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 		57FCDB5C24D70E8F00C3FD21 /* Strike */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 57FCDB8324D70E9100C3FD21 /* Build configuration list for PBXNativeTarget "Strike" */;
@@ -224,6 +280,9 @@
 				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
+					57F0D7AB24D7788200D5F688 = {
+						CreatedOnToolsVersion = 12.0;
+					};
 					57FCDB5C24D70E8F00C3FD21 = {
 						CreatedOnToolsVersion = 12.0;
 					};
@@ -253,11 +312,21 @@
 				57FCDB5C24D70E8F00C3FD21 /* Strike */,
 				57FCDB6E24D70E9100C3FD21 /* StrikeTests */,
 				57FCDB7924D70E9100C3FD21 /* StrikeUITests */,
+				57F0D7AB24D7788200D5F688 /* Strike-iOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		57F0D7AA24D7788200D5F688 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57F0D7B624D7788400D5F688 /* Preview Assets.xcassets in Resources */,
+				57F0D7B324D7788400D5F688 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		57FCDB5B24D70E8F00C3FD21 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -284,6 +353,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		57F0D7A824D7788200D5F688 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57F0D7BB24D778A600D5F688 /* ContentView.swift in Sources */,
+				57F0D7BE24D778B000D5F688 /* DetailView.swift in Sources */,
+				57F0D7BC24D778A900D5F688 /* StrikeApp.swift in Sources */,
+				57F0D7C024D778B600D5F688 /* TodoModel.swift in Sources */,
+				57F0D7BD24D778AC00D5F688 /* AddForm.swift in Sources */,
+				57F0D7BF24D778B300D5F688 /* DetailListItem.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		57FCDB5924D70E8F00C3FD21 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -330,6 +412,53 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		57F0D7B824D7788400D5F688 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Strike-iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = 3C42F7N9CQ;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Strike-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "co.jossy.Strike-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		57F0D7B924D7788400D5F688 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Strike-iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = 3C42F7N9CQ;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Strike-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "co.jossy.Strike-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		57FCDB8124D70E9100C3FD21 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -381,6 +510,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -436,6 +566,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -580,6 +711,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		57F0D7BA24D7788400D5F688 /* Build configuration list for PBXNativeTarget "Strike-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57F0D7B824D7788400D5F688 /* Debug */,
+				57F0D7B924D7788400D5F688 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		57FCDB5824D70E8F00C3FD21 /* Build configuration list for PBXProject "Strike" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -27,6 +27,7 @@ struct ContentView: View {
     }
   }
   
+  #if os(macOS)
   var sidebar: some View {
     
     List(selection: $selection){
@@ -34,9 +35,9 @@ struct ContentView: View {
       Section {
         SideBarOption(title: "All", iconName: "circles.hexagonpath", option: SideBarOptions.all)
       }
-
+      
       Divider()
-
+      
       Section {
         Text("Sorting Options")
         SideBarOption(title: "Not Started", iconName: "circle", option: SideBarOptions.notStarted)
@@ -47,10 +48,31 @@ struct ContentView: View {
         
       }
       
-  
+      
     }.listStyle(SidebarListStyle())
     
   }
+  #else
+  var sidebar: some View {
+    
+    List(selection: $selection){
+      
+      Section {
+        Text("Sorting Options")
+        SideBarOption(title: "All", iconName: "circles.hexagonpath", option: SideBarOptions.all,showAddScreen:$showAddScreen)
+        
+        SideBarOption(title: "Not Started", iconName: "circle", option: SideBarOptions.notStarted,showAddScreen:$showAddScreen)
+        
+        SideBarOption(title: "In Progress", iconName: "circle.lefthalf.fill", option: SideBarOptions.progress,showAddScreen:$showAddScreen)
+        
+        SideBarOption(title: "Done", iconName: "circle.fill", option: .done,showAddScreen:$showAddScreen)
+      }
+      
+      
+    }.listStyle(SidebarListStyle())
+    
+  }
+  #endif
   
   @State var showAddScreen: Bool = false
   
@@ -80,21 +102,36 @@ struct ContentView: View {
 }
 
 private func toggleSidebar() {
-      #if os(iOS)
-      #else
-      NSApp.keyWindow?.firstResponder?.tryToPerform(#selector(NSSplitViewController.toggleSidebar(_:)), with: nil)
-      #endif
-  }
+  #if os(iOS)
+  #else
+  NSApp.keyWindow?.firstResponder?.tryToPerform(#selector(NSSplitViewController.toggleSidebar(_:)), with: nil)
+  #endif
+}
 
 struct SideBarOption: View {
   
   var title: String
   var iconName: String
   var option: ContentView.SideBarOptions
+  @Binding var showAddScreen: Bool
   
   var body: some View {
+    #if os(macOS)
     Label(title, systemImage: iconName)
       .tag(option)
+    #else
+    NavigationLink(
+      destination: DetailView(sorting: option).navigationBarItems(trailing: Button(action: {
+        showAddScreen.toggle()
+      }, label: {
+        Label("Add", systemImage: "plus")
+      })),
+      label: {
+        Label(title, systemImage: iconName)
+          .tag(option)
+      })
+    
+    #endif
   }
 }
 
