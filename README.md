@@ -8,12 +8,13 @@
 
 * Add and manage the state of ToDoList Tasks
 * Very Basic Persistence
+* Swipe to delete 
 
 ### ToDo (LOL)
-* Delete
-* fix horrible transitions
 * Groups
+* Greater range of ordering options (dateCreated, dateUpdated)
 * Kanban?
+* Tags
 
 #### Frameworks used
 `SwiftUI` `SwiftUI Lifecycle`

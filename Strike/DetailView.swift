@@ -14,9 +14,13 @@ struct DetailView: View {
   var sorting: ContentView.SideBarOptions
   
   var body: some View {
-    List(model.getModelsWithSorting(sorting: sorting)){ model in
-      DetailListItem(model: model)
-    }.listStyle(SidebarListStyle())
+    List{
+      ForEach(model.getModelsWithSorting(sorting: sorting)){ model in
+        DetailListItem(model: model)
+      }.onDelete(perform: { indexSet in
+        model.deleteModels(with: indexSet)
+      })
+    }.listStyle(DefaultListStyle())
   }
 }
 

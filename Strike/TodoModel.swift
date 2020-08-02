@@ -11,7 +11,7 @@ class StrikeModel: ObservableObject {
   
   @Published var models: [ToDoModel] = []
   
-  @Published var arrangedObjects: [ToDoModel] = []
+  private var arrangedObjects: [ToDoModel] = []
   
   func cycleStatus(with id:UUID){
     
@@ -45,7 +45,7 @@ class StrikeModel: ObservableObject {
     
   }
   
-  func getModelsWithSorting(sorting:ContentView.SideBarOptions) -> [ToDoModel]{
+  func getModelsWithSorting(sorting:ContentView.SideBarOptions) -> [ToDoModel] {
     
     var returnArray = Array<ToDoModel>()
     
@@ -67,15 +67,35 @@ class StrikeModel: ObservableObject {
       })
     }
     
-    return returnArray.sorted(by: {
+    self.arrangedObjects = returnArray.sorted(by: {
       $0.lastUpdated>$1.lastUpdated
     })
+    
+    return arrangedObjects
     
   }
   
   func addModel(with title:String, and description:String){
     models.append(ToDoModel(title: title, description: description))
     saveModels()
+  }
+  
+  func deleteModels(with set:IndexSet){
+    let ids = arrangedObjects.enumerated().compactMap { (index,model) -> UUID? in
+      if set.contains(index){
+        return model.id
+      }
+      return nil
+    }
+    
+    for (index,model) in models.enumerated().reversed(){
+      if ids.contains(model.id){
+        models.remove(at: index)
+      }
+    }
+    
+    saveModels()
+    
   }
   
   private var decoder = JSONDecoder()
