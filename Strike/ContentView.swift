@@ -113,7 +113,9 @@ struct SideBarOption: View {
   var title: String
   var iconName: String
   var option: ContentView.SideBarOptions
+  #if os(iOS)
   @Binding var showAddScreen: Bool
+  #endif
   
   var body: some View {
     #if os(macOS)
@@ -121,7 +123,7 @@ struct SideBarOption: View {
       .tag(option)
     #else
     NavigationLink(
-      destination: DetailView(sorting: option).navigationBarItems(trailing: Button(action: {
+      destination: DetailView(sorting: option).navigationTitle(title).navigationBarItems(trailing: Button(action: {
         showAddScreen.toggle()
       }, label: {
         Label("Add", systemImage: "plus")
