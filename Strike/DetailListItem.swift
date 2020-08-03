@@ -26,11 +26,10 @@ struct DetailListItem: View {
   }
   
   var body: some View {
-    
-    
+  
     HStack(alignment:.firstTextBaseline){
       Group {
-        Image(systemName: imageName).animation(.default)
+        ImageSwitchView(state: model.state).frame(width: 13, height: 13, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).clipped().animation(.spring())
         VStack(alignment:.leading){
           Text(model.title)
             .font(.title3)

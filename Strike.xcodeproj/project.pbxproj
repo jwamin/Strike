@@ -15,6 +15,8 @@
 		57F0D7BE24D778B000D5F688 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCDB8E24D7139D00C3FD21 /* DetailView.swift */; };
 		57F0D7BF24D778B300D5F688 /* DetailListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCDB9024D714ED00C3FD21 /* DetailListItem.swift */; };
 		57F0D7C024D778B600D5F688 /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCDB8C24D710D200C3FD21 /* TodoModel.swift */; };
+		57F0D7C224D7879800D5F688 /* ImageSwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F0D7C124D7879800D5F688 /* ImageSwitchView.swift */; };
+		57F0D7C324D7879800D5F688 /* ImageSwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F0D7C124D7879800D5F688 /* ImageSwitchView.swift */; };
 		57FCDB6124D70E8F00C3FD21 /* StrikeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCDB6024D70E8F00C3FD21 /* StrikeApp.swift */; };
 		57FCDB6324D70E8F00C3FD21 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCDB6224D70E8F00C3FD21 /* ContentView.swift */; };
 		57FCDB6524D70E9100C3FD21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57FCDB6424D70E9100C3FD21 /* Assets.xcassets */; };
@@ -50,6 +52,7 @@
 		57F0D7B224D7788400D5F688 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57F0D7B524D7788400D5F688 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		57F0D7B724D7788400D5F688 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57F0D7C124D7879800D5F688 /* ImageSwitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSwitchView.swift; sourceTree = "<group>"; };
 		57FCDB5D24D70E8F00C3FD21 /* Strike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Strike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57FCDB6024D70E8F00C3FD21 /* StrikeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrikeApp.swift; sourceTree = "<group>"; };
 		57FCDB6224D70E8F00C3FD21 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -154,6 +157,7 @@
 				57FCDB9224D7284600C3FD21 /* AddForm.swift */,
 				57FCDB8E24D7139D00C3FD21 /* DetailView.swift */,
 				57FCDB9024D714ED00C3FD21 /* DetailListItem.swift */,
+				57F0D7C124D7879800D5F688 /* ImageSwitchView.swift */,
 				57FCDB8C24D710D200C3FD21 /* TodoModel.swift */,
 				57FCDB9824D73BB600C3FD21 /* CalendarView.swift */,
 				57FCDB6424D70E9100C3FD21 /* Assets.xcassets */,
@@ -358,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57F0D7BB24D778A600D5F688 /* ContentView.swift in Sources */,
+				57F0D7C324D7879800D5F688 /* ImageSwitchView.swift in Sources */,
 				57F0D7BE24D778B000D5F688 /* DetailView.swift in Sources */,
 				57F0D7BC24D778A900D5F688 /* StrikeApp.swift in Sources */,
 				57F0D7C024D778B600D5F688 /* TodoModel.swift in Sources */,
@@ -370,6 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57F0D7C224D7879800D5F688 /* ImageSwitchView.swift in Sources */,
 				57FCDB8D24D710D200C3FD21 /* TodoModel.swift in Sources */,
 				57FCDB9924D73BBF00C3FD21 /* CalendarView.swift in Sources */,
 				57FCDB8F24D7139D00C3FD21 /* DetailView.swift in Sources */,
