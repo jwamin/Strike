@@ -25,13 +25,13 @@ struct ImageSwitchView: View {
   
     var body: some View {
       GeometryReader { reader in
-        Image(systemName: "circle").resizable().aspectRatio(1, contentMode: .fill).opacity(0).background(
+        Image(systemName: "circle").resizable().aspectRatio(1, contentMode: .fill).background(
         HStack(spacing:0){
           Image(systemName: "circle.fill").resizable().aspectRatio(1, contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
           Image(systemName: "circle.lefthalf.fill").resizable().aspectRatio(1, contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
           Image(systemName: "circle").resizable().aspectRatio(1, contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
         }.offset(x: positionY(y: reader.size.width))
-        )
+        ).mask(Image(systemName: "circle.fill"))
       }
     }
 }
