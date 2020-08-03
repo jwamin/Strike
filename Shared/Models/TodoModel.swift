@@ -24,6 +24,8 @@ class StrikeModel: ObservableObject {
     
     self.models = models
     
+    self.arrangedObjects = models
+    
   }
   
   // MARK: Update Status of Item
@@ -107,7 +109,7 @@ class StrikeModel: ObservableObject {
     }
     
     for (index,model) in models.enumerated().reversed(){
-      if ids.contains(model.id){
+      if ids.contains(model.id) {
         models.remove(at: index)
       }
     }

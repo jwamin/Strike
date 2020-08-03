@@ -18,6 +18,8 @@
 * Kanban Screen?
 * Tags, tag management
 * iOS Target
+  * Main sidebar page
+  * animation mask
 * 'Real' Persistence
 
 #### Frameworks used

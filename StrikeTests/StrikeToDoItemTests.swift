@@ -1,5 +1,5 @@
 //
-//  StrikeTests.swift
+//  StrikeToDoItemTests.swift
 //  StrikeTests
 //
 //  Created by Joss Manger on 8/2/20.
@@ -8,7 +8,7 @@
 import XCTest
 @testable import Strike
 
-class StrikeTests: XCTestCase {
+class StrikeToDoItemTests: XCTestCase {
 
     //MARK: ModelTests
     var model: ToDoModel!
