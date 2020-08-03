@@ -17,9 +17,11 @@ struct CalendarView: View {
     
     return Calendar.current.monthSymbols[monthIndex-1]
     
-    
   }
   
+  func isWeekend(weekday: Int) -> Bool {
+    (weekday == 1 || weekday == 7)
+  }
   
   func getDayForWeekday(weekOfMonth:Int, weekday:Int) -> String {
     
@@ -46,14 +48,13 @@ struct CalendarView: View {
       Text(getMonth())
       HStack{
         ForEach(headings,id:\.self) { heading in
-          SquareText(str: heading)
+          SquareText(str: heading).foregroundColor(heading == "S" ? Color.gray : Color.black)
         }
       }
       ForEach(0..<6) { week in
         HStack{
-          ForEach(1..<8){ weekday -> AnyView in
-            let day = Int("\((6*week+(1*week))+weekday)")!
-            return AnyView(SquareText(str:"\(getDayForWeekday(weekOfMonth:week+1 ,weekday: weekday))"))
+          ForEach(1..<8){ weekday in
+            SquareText(str:"\(getDayForWeekday(weekOfMonth:week+1 ,weekday: weekday))").foregroundColor(isWeekend(weekday: weekday) ? Color.gray : Color.black)
           }
         }
       }
