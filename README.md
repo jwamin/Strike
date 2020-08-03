@@ -9,9 +9,10 @@
 * Add and manage the state of ToDoList Tasks
 * Very Basic Persistence
 * Swipe to delete 
+* Transition for symbols
 
 ### ToDo (LOL)
-* Transition for symbols
+* Swiper to delete for active (`SidebarListStyle`)
 * Groups
 * Greater range of ordering options (dateCreated, dateUpdated)
 * Kanban Screen?
