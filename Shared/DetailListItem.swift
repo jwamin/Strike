@@ -29,7 +29,7 @@ struct DetailListItem: View {
   
     HStack(alignment:.firstTextBaseline){
       Group {
-        ImageSwitchView(state: model.state).frame(width: 13, height: 13, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).clipped().animation(.spring())
+        ImageSwitchView(state: model.state).frame(width: 13, height: 13).clipped().animation(.spring()).offset(y:1)
         VStack(alignment:.leading){
           Text(model.title)
             .font(.title3)
@@ -57,7 +57,7 @@ struct DetailListItem: View {
         }
       }, label: {
         Image(systemName:"info.circle")
-      }).foregroundColor(expanded ? Color.red : nil)
+      }).buttonStyle(LinkButtonStyle()).foregroundColor(expanded ? Color.red : nil)
     }.frame(maxWidth:.infinity)
   }
 }
