@@ -108,10 +108,10 @@ class StrikeModel: ObservableObject {
       return nil
     }
     
-    for (index,model) in models.enumerated().reversed(){
-      if ids.contains(model.id) {
-        models.remove(at: index)
-      }
+    // use half stable partition
+    
+    models.removeAll {
+      ids.contains($0.id)
     }
     
     saveModels()
