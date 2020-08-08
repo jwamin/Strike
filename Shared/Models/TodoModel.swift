@@ -64,29 +64,24 @@ class StrikeModel: ObservableObject {
   //MARK: Process Models for display
   
   func getModelsWithSorting(sorting:ContentView.SideBarOptions) -> [ToDoModel] {
-    
-    var returnArray = Array<ToDoModel>()
+    var sortState:ToDoModel.Status? = nil
     
     switch(sorting){
     
-    case.all:
-      returnArray = models
     case .done:
-      returnArray = models.filter({ (model) -> Bool in
-        model.state == .done
-      })
+      sortState = .done
     case .progress:
-      returnArray = models.filter({ (model) -> Bool in
-        model.state == .inProgress
-      })
+      sortState = .inProgress
     case .notStarted:
-      returnArray = models.filter({ (model) -> Bool in
-        model.state == .notStarted
-      })
+      sortState = .notStarted
+    default:
+      break
     }
     
-    self.arrangedObjects = returnArray.sorted(by: {
-      $0.lastUpdated>$1.lastUpdated
+    self.arrangedObjects = models.filter { model in
+      (sortState == nil) || model.state == sortState
+    }.sorted(by: {
+      $0.lastUpdated > $1.lastUpdated
     })
     
     return arrangedObjects
