@@ -80,19 +80,19 @@ struct ContentView: View {
     NavigationView{
       sidebar
       DetailView(sorting: $selection.wrappedValue.first!)
-        .toolbar(items: {
-          ToolbarItem(placement: .primaryAction){
+        .toolbar(content:{
+          //ToolbarItem(placement: .primaryAction){
             Button(action: {
               showAddScreen.toggle()
             }, label: {
               Label("Add", systemImage: "plus").font(.largeTitle)
             })
-          }
-          ToolbarItem(placement: .navigation) {
+          //}
+          //ToolbarItem(placement: .navigation) {
             Button(action: toggleSidebar, label: {
               Image(systemName: "sidebar.left")
             })
-          }
+          //}
         })
     }.sheet(isPresented: $showAddScreen, onDismiss: nil, content: {
       AddForm()
